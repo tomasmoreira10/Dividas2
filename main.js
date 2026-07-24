@@ -1,5 +1,3 @@
-import './style.css'
-
 const STORAGE_KEY = 'bj-contas-v1'
 const LEGACY_KEY = 'debt-tracker-v1'
 const app = document.querySelector('#app')
@@ -863,4 +861,4 @@ function escapeHtml(text){ return String(text || '').replace(/&/g,'&amp;').repla
 
 render()
 
-if('serviceWorker' in navigator){ window.addEventListener('load', ()=>{ navigator.serviceWorker.register(`${import.meta.env.BASE_URL}service-worker.js`).catch(()=>{}) }) }
+if('serviceWorker' in navigator){ window.addEventListener('load', ()=>{ navigator.serviceWorker.register('./service-worker.js').catch(()=>{}) }) }
